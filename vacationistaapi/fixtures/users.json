@@ -1,0 +1,38 @@
+[
+  {
+    "model": "vacationistaapi.user",
+    "pk": 1,
+    "fields": {
+      "uid": "1",
+      "first_name": "Bill",
+      "last_name": "McCullough",
+      "date_registered": "2022-12-13",
+      "bio": "Bill McCullough is a seasoned surfer with a passion for riding the waves that has lasted a lifetime. Born and raised in Southern California, Bill grew up with saltwater in his blood and a board under his feet. From his earliest memories, he was drawn to the ocean, spending every spare moment in the water.As he got older, Bill's love of surfing only grew stronger. He began competing in local competitions, quickly gaining a reputation as a fearless rider with a natural talent for catching the biggest and most challenging waves. Despite setbacks and injuries along the way, Bill never lost his determination or his passion for the sport.Over the years, Bill has surfed in some of the world's most iconic locations, from Hawaii to Australia to Indonesia. He's faced down massive swells and treacherous currents, always pushing himself to the limit and testing his skills as a surfer. Yet through it all, he remains grounded, humble, and always grateful for the opportunity to do what he loves.",
+      "image": "https://m.media-amazon.com/images/M/MV5BMTg5OTE5NDY4OV5BMl5BanBnXkFtZTcwOTYzMDMzMQ@@._V1_.jpg"
+    }
+  },
+  {
+    "model": "vacationistaapi.user",
+    "pk": 2,
+    "fields": {
+      "uid": "2",
+      "first_name": "Jessica",
+      "last_name": "Firestorm",
+      "date_registered": "2022-01-10",
+      "bio": "Jessica Firestorm is a true jazz aficionado with an unwavering love for the genre. Born and raised in New Orleans, she was exposed to jazz at a young age and it quickly became her passion. She spent countless hours listening to the greats, studying their styles, and soaking up the unique sound of the city.As she got older, Jessica began to explore jazz on a deeper level. She studied music theory, learned to play multiple instruments, and attended concerts and festivals whenever possible. Her dedication paid off and she soon became known as an expert in the jazz community.Jessica's love of jazz is not limited to the classics, however. She's always seeking out new artists and fresh sounds, eager to expand her knowledge and appreciation of the genre. She's been known to travel the world in search of the best jazz performances, and her collection of rare recordings is the envy of many.",
+      "image": "https://nypost.com/wp-content/uploads/sites/2/2020/09/jessicak-krug.jpg?quality=75&strip=all"
+    }
+  },
+  {
+    "model": "vacationistaapi.user",
+    "pk": 3,
+    "fields": {
+      "uid": "3",
+      "first_name": "Brad",
+      "last_name": "Butter",
+      "date_registered": "2022-03-14",
+      "bio": "Brad Butter is a diehard action movie enthusiast with a love for adrenaline-fueled thrill rides. He's been a fan of the genre since he was a kid, and he's seen every classic and modern action movie multiple times. Brad is a walking encyclopedia of action movie trivia, and he's always eager to share his knowledge with fellow fans. He's even started a popular blog where he reviews and analyzes the latest action flicks. When he's not watching movies, Brad can often be found at the gym, training to be a real-life action hero.",
+      "image": "https://www.actionman.com/images/head-eagle-eyes.jpg"
+    }
+  }
+]
