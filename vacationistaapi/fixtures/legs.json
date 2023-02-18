@@ -58,7 +58,7 @@
     "model": "vacationistaapi.leg",
     "pk": 6,
     "fields": {
-      "user": 4,
+      "user": 3,
       "start": "2022-12-10",
       "end": "2022-12-20",
       "location": "London, England",
@@ -69,7 +69,7 @@
     "model": "vacationistaapi.leg",
     "pk": 7,
     "fields": {
-      "user": 4,
+      "user": 3,
       "start": "2022-12-20",
       "end": "2023-01-01",
       "location": "Amsterdam, Netherlands",
@@ -80,7 +80,7 @@
     "model": "vacationistaapi.leg",
     "pk": 8,
     "fields": {
-      "user": 4,
+      "user": 3,
       "start": "2023-01-01",
       "end": "2023-01-20",
       "location": "Berlin, Germany",

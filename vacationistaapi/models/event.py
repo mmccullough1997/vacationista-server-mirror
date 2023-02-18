@@ -6,7 +6,7 @@ from .leg import Leg
 class Event(models.Model):
   event_type = models.ForeignKey(EventType, on_delete=models.CASCADE)
   trip = models.ForeignKey(Trip, on_delete=models.CASCADE)
-  leg = models.ForeignKey(Leg, on_delete=models.CASCADE)
+  leg = models.ForeignKey(Leg, on_delete=models.CASCADE, blank=True, null=True)
   description = models.CharField(max_length=500)
   location = models.CharField(max_length=500)
   date = models.DateField(blank=True, null=True)

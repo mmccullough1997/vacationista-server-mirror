@@ -1,6 +1,6 @@
 [
   {
-    "model": "vacationistaapi.highlights",
+    "model": "vacationistaapi.highlight",
     "pk": 1,
     "fields": {
       "title": "Amalfi Coast",
@@ -11,7 +11,7 @@
     }
   },
   {
-    "model": "vacationistaapi.highlights",
+    "model": "vacationistaapi.highlight",
     "pk": 2,
     "fields": {
       "title": "Berlin",
@@ -22,7 +22,7 @@
     }
   },
   {
-    "model": "vacationistaapi.highlights",
+    "model": "vacationistaapi.highlight",
     "pk": 3,
     "fields": {
       "title": "Glasgow",
@@ -30,6 +30,28 @@
       "image": "https://img.delicious.com.au/MzilNPOR/del/2018/12/on-the-go-in-glasgow-98211-2.jpg",
       "location": "Scotland",
       "thumbnail": "https://media.timeout.com/images/105400989/750/422/image.jpg"
+    }
+  },
+  {
+    "model": "vacationistaapi.highlight",
+    "pk": 4,
+    "fields": {
+      "title": "Biarritz",
+      "content": "Biarritz is a coastal city located in the southwestern region of France, renowned for its picturesque beaches, vibrant nightlife, and rich cultural heritage. Nestled in the heart of the Basque Country, the city boasts a unique blend of French and Spanish influences, making it a popular tourist destination for visitors from all over the world. Some of the most popular attractions in Biarritz include the Grande Plage, a beautiful sandy beach that is ideal for sunbathing and swimming, the Museum of the Sea, which showcases the rich maritime history of the city, and the Rocher de la Vierge, a stunning natural landmark that offers breathtaking views of the Bay of Biscay. Additionally, Biarritz is home to a plethora of restaurants, cafes, and bars, making it an excellent destination for foodies and nightlife enthusiasts alike.",
+      "image": "https://a.cdn-hotels.com/gdcs/production114/d720/056f3475-11b9-45b3-aeaf-7536f6ccd0a6.jpg?impolicy=fcrop&w=800&h=533&q=medium",
+      "location": "France",
+      "thumbnail": "https://www.whereandwhen.net/site/images/illustration/biarritz_478.jpg"
+    }
+  },
+  {
+    "model": "vacationistaapi.highlight",
+    "pk": 5,
+    "fields": {
+      "title": "San Sebastián",
+      "content": "Donostia-San Sebastian is a picturesque coastal city located in the Basque Country region of northern Spain, known for its stunning beaches, impressive architecture, and world-renowned cuisine. The city is situated on the Bay of Biscay, offering visitors breathtaking views of the sea and the surrounding mountains. One of the most popular attractions in Donostia-San Sebastian is La Concha Beach, a crescent-shaped shoreline that is consistently ranked as one of the best urban beaches in Europe. The city is also home to a number of historic buildings, including the Miramar Palace and the San Telmo Museum. Additionally, Donostia-San Sebastian is famous for its culinary scene, which is centered around the pintxos, a type of Basque tapas that is served in bars and restaurants throughout the city. With its rich cultural heritage, stunning natural scenery, and world-class gastronomy, Donostia-San Sebastian is a must-visit destination for anyone traveling to the Basque Country.",
+      "image": "https://www.theintrepidguide.com/wp-content/uploads/2019/05/Top-things-to-do-in-San-Sebastian-Spain-Balcony-at-Monte-Igueldo.jpg",
+      "location": "Spain",
+      "thumbnail": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/san-sebastian-bay-lit-up-3f087c6.jpg"
     }
   }
 ]

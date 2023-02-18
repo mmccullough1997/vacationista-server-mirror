@@ -1,27 +1,27 @@
 [
   {
-    "model": "vacationistaapi.transportation_type",
+    "model": "vacationistaapi.transportationtype",
     "pk": 1,
     "fields": {
       "label": "Plane"
     }
   },
   {
-    "model": "vacationistaapi.transportation_type",
+    "model": "vacationistaapi.transportationtype",
     "pk": 2,
     "fields": {
       "label": "Car"
     }
   },
   {
-    "model": "vacationistaapi.transportation_type",
+    "model": "vacationistaapi.transportationtype",
     "pk": 3,
     "fields": {
       "label": "Train"
     }
   },
   {
-    "model": "vacationistaapi.transportation_type",
+    "model": "vacationistaapi.transportationtype",
     "pk": 4,
     "fields": {
       "label": "Ship/Boat"
