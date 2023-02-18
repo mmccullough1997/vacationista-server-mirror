@@ -1,0 +1,156 @@
+[
+  {
+    "model": "vacationistaapi.transportation",
+    "pk": 1,
+    "fields": {
+      "transportation_type": 1,
+      "trip": 1,
+      "leg": null,
+      "travel_from": "Nashville, TN",
+      "travel_to": "Lisbon, Portugal",
+      "amount": 650,
+      "comment": "Plane ride from Nashville to Lisbon",
+      "round_trip": false
+    }
+  },
+  {
+    "model": "vacationistaapi.transportation",
+    "pk": 2,
+    "fields": {
+      "transportation_type": 1,
+      "trip": 2,
+      "leg": null,
+      "travel_from": "Nashville, TN",
+      "travel_to": "Paris, France",
+      "amount": 750,
+      "comment": "Plane ride from Nashville to Paris",
+      "round_trip": true
+    }
+  },
+  {
+    "model": "vacationistaapi.transportation",
+    "pk": 3,
+    "fields": {
+      "transportation_type": 1,
+      "trip": 3,
+      "leg": null,
+      "travel_from": "Philadelphia, PA",
+      "travel_to": "Bangkok, Thailand",
+      "amount": 1500,
+      "comment": "Plane ride from Philly to Bangkok",
+      "round_trip": true
+    }
+  },
+  {
+    "model": "vacationistaapi.transportation",
+    "pk": 4,
+    "fields": {
+      "transportation_type": 1,
+      "trip": 4,
+      "leg": null,
+      "travel_from": "Los Angeles, CA",
+      "travel_to": "London, England",
+      "amount": 1000,
+      "comment": "Plane ride from LA to London",
+      "round_trip": true
+    }
+  },
+  {
+    "model": "vacationistaapi.transportation",
+    "pk": 5,
+    "fields": {
+      "transportation_type": 2,
+      "trip": 1,
+      "leg": 1,
+      "travel_from": "Lisbon, Portugal",
+      "travel_to": "Madrid, Spain",
+      "amount": 75,
+      "comment": "Car from Lisbon to Madrid",
+      "round_trip": false
+    }
+  },
+  {
+    "model": "vacationistaapi.transportation",
+    "pk": 6,
+    "fields": {
+      "transportation_type": 1,
+      "trip": 1,
+      "leg": 1,
+      "travel_from": "Madrid, Spain",
+      "travel_to": "Nashville, TN",
+      "amount": 600,
+      "comment": "Plane from Madrid to Nashville",
+      "round_trip": false
+    }
+  },
+  {
+    "model": "vacationistaapi.transportation",
+    "pk": 7,
+    "fields": {
+      "transportation_type": 3,
+      "trip": 2,
+      "leg": 2,
+      "travel_from": "Paris, France",
+      "travel_to": "Versailles, France",
+      "amount": 30,
+      "comment": "Train from Paris to Versailles",
+      "round_trip": false
+    }
+  },
+  {
+    "model": "vacationistaapi.transportation",
+    "pk": 8,
+    "fields": {
+      "transportation_type": 3,
+      "trip": 2,
+      "leg": 3,
+      "travel_from": "Versailles, France",
+      "travel_to": "Marseille, France",
+      "amount": 45,
+      "comment": "Train from Versailles to Marseille",
+      "round_trip": false
+    }
+  },
+  {
+    "model": "vacationistaapi.transportation",
+    "pk": 9,
+    "fields": {
+      "transportation_type": 1,
+      "trip": 4,
+      "leg": 4,
+      "travel_from": "London, England",
+      "travel_to": "Amsterdam, Netherlands",
+      "amount": 100,
+      "comment": "Plane from London to Amsterdam",
+      "round_trip": false
+    }
+  },
+  {
+    "model": "vacationistaapi.transportation",
+    "pk": 10,
+    "fields": {
+      "transportation_type": 1,
+      "trip": 4,
+      "leg": 5,
+      "travel_from": "Amsterdam, Netherlands",
+      "travel_to": "Berlin, Germany",
+      "amount": 150,
+      "comment": "Plane from Amsterdam to Berlin",
+      "round_trip": false
+    }
+  },
+  {
+    "model": "vacationistaapi.transportation",
+    "pk": 11,
+    "fields": {
+      "transportation_type": 2,
+      "trip": 4,
+      "leg": 5,
+      "travel_from": "Berlin, Germany",
+      "travel_to": "Dusseldorf, Germany",
+      "amount": 30,
+      "comment": "Car from Berlin to Dusseldorf",
+      "round_trip": true
+    }
+  }
+]

@@ -1,0 +1,90 @@
+[
+  {
+    "model": "vacationistaapi.leg",
+    "pk": 1,
+    "fields": {
+      "user": 1,
+      "start": "2023-01-13",
+      "end": "2023-01-16",
+      "location": "Lisbon, Portugal",
+      "budget": 500
+    }
+  },
+  {
+    "model": "vacationistaapi.leg",
+    "pk": 2,
+    "fields": {
+      "user": 1,
+      "start": "2023-01-16",
+      "end": "2023-01-20",
+      "location": "Madrid, Spain",
+      "budget": 1000
+    }
+  },
+  {
+    "model": "vacationistaapi.leg",
+    "pk": 3,
+    "fields": {
+      "user": 1,
+      "start": "2023-02-01",
+      "end": "2023-02-05",
+      "location": "Paris, France",
+      "budget": 650
+    }
+  },
+  {
+    "model": "vacationistaapi.leg",
+    "pk": 4,
+    "fields": {
+      "user": 1,
+      "start": "2023-02-05",
+      "end": "2023-02-08",
+      "location": "Versailles, France",
+      "budget": 600
+    }
+  },
+  {
+    "model": "vacationistaapi.leg",
+    "pk": 5,
+    "fields": {
+      "user": 1,
+      "start": "2023-02-08",
+      "end": "2023-02-12",
+      "location": "Marseille, France",
+      "budget": 1000
+    }
+  },
+  {
+    "model": "vacationistaapi.leg",
+    "pk": 6,
+    "fields": {
+      "user": 3,
+      "start": "2022-12-10",
+      "end": "2022-12-20",
+      "location": "London, England",
+      "budget": 4000
+    }
+  },
+  {
+    "model": "vacationistaapi.leg",
+    "pk": 7,
+    "fields": {
+      "user": 3,
+      "start": "2022-12-20",
+      "end": "2023-01-01",
+      "location": "Amsterdam, Netherlands",
+      "budget": 4000
+    }
+  },
+  {
+    "model": "vacationistaapi.leg",
+    "pk": 8,
+    "fields": {
+      "user": 3,
+      "start": "2023-01-01",
+      "end": "2023-01-20",
+      "location": "Berlin, Germany",
+      "budget": 1000
+    }
+  }
+]

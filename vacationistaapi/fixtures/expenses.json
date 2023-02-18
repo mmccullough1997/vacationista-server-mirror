@@ -1,0 +1,170 @@
+[
+  {
+    "model": "vacationistaapi.expense",
+    "pk": 1,
+    "fields": {
+      "expense_type": 5,
+      "trip": 1,
+      "leg": null,
+      "amount": 45,
+      "comment": "Travel insurance for trip",
+      "title": "Travel Insurance"
+    }
+  },
+  {
+    "model": "vacationistaapi.expense",
+    "pk": 2,
+    "fields": {
+      "expense_type": 1,
+      "trip": 1,
+      "leg": 1,
+      "amount": 80,
+      "comment": "Hostel for 3 nights in Lisbon",
+      "title": "Hostel"
+    }
+  },
+  {
+    "model": "vacationistaapi.expense",
+    "pk": 3,
+    "fields": {
+      "expense_type": 1,
+      "trip": 1,
+      "leg": 2,
+      "amount": 100,
+      "comment": "Hostel for 4 nights in Madrid",
+      "title": "Hostel"
+    }
+  },
+  {
+    "model": "vacationistaapi.expense",
+    "pk": 4,
+    "fields": {
+      "expense_type": 2,
+      "trip": 1,
+      "leg": 1,
+      "amount": 50,
+      "comment": "Groceries in Lisbon",
+      "title": "Groceries"
+    }
+  },
+  {
+    "model": "vacationistaapi.expense",
+    "pk": 5,
+    "fields": {
+      "expense_type": 2,
+      "trip": 1,
+      "leg": 2,
+      "amount": 150,
+      "comment": "Restaurants in Madrid",
+      "title": "Restaurants"
+    }
+  },
+  {
+    "model": "vacationistaapi.expense",
+    "pk": 6,
+    "fields": {
+      "expense_type": 1,
+      "trip": 2,
+      "leg": 3,
+      "amount": 250,
+      "comment": "Hotel in Paris for 4 nights",
+      "title": "Hotel"
+    }
+  },
+  {
+    "model": "vacationistaapi.expense",
+    "pk": 7,
+    "fields": {
+      "expense_type": 1,
+      "trip": 2,
+      "leg": 4,
+      "amount": 275,
+      "comment": "Hotel in Versailles for 3 nights",
+      "title": "Hotel"
+    }
+  },
+  {
+    "model": "vacationistaapi.expense",
+    "pk": 8,
+    "fields": {
+      "expense_type": 1,
+      "trip": 2,
+      "leg": 5,
+      "amount": 300,
+      "comment": "Hotel in Marseille for 4 nights",
+      "title": "Hotel"
+    }
+  },
+  {
+    "model": "vacationistaapi.expense",
+    "pk": 9,
+    "fields": {
+      "expense_type": 1,
+      "trip": 3,
+      "leg": null,
+      "amount": 1500,
+      "comment": "Hotel in Bangkok for 9 nights",
+      "title": "Hotel"
+    }
+  },
+  {
+    "model": "vacationistaapi.expense",
+    "pk": 10,
+    "fields": {
+      "expense_type": 2,
+      "trip": 3,
+      "leg": null,
+      "amount": 1500,
+      "comment": "Eating and groceries",
+      "title": "Food"
+    }
+  },
+  {
+    "model": "vacationistaapi.expense",
+    "pk": 11,
+    "fields": {
+      "expense_type": 1,
+      "trip": 4,
+      "leg": 6,
+      "amount": 2000,
+      "comment": "Lodging in London for 10 nights",
+      "title": "Lodging"
+    }
+  },
+  {
+    "model": "vacationistaapi.expense",
+    "pk": 12,
+    "fields": {
+      "expense_type": 2,
+      "trip": 4,
+      "leg": 6,
+      "amount": 500,
+      "comment": "Food and drink in London for 10 nights",
+      "title": "Food & Drink"
+    }
+  },
+  {
+    "model": "vacationistaapi.expense",
+    "pk": 13,
+    "fields": {
+      "expense_type": 1,
+      "trip": 4,
+      "leg": 7,
+      "amount": 3000,
+      "comment": "Lodging in Amsterdam for 12 nights",
+      "title": "Lodging"
+    }
+  },
+  {
+    "model": "vacationistaapi.expense",
+    "pk": 14,
+    "fields": {
+      "expense_type": 2,
+      "trip": 4,
+      "leg": 8,
+      "amount": 500,
+      "comment": "Food and drink in Berlin",
+      "title": "Lodging"
+    }
+  }
+]

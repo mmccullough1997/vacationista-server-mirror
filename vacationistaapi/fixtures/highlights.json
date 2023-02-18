@@ -1,0 +1,57 @@
+[
+  {
+    "model": "vacationistaapi.highlight",
+    "pk": 1,
+    "fields": {
+      "title": "Amalfi Coast",
+      "content": "The Amalfi Coast is a breathtakingly beautiful stretch of coastline in southern Italy, renowned for its picturesque towns, stunning vistas, and crystal-clear waters. The rugged cliffs rise dramatically from the sea, dotted with colorful houses, terraced gardens, and ancient ruins. The region is known for its fresh and flavorful cuisine, featuring local ingredients such as lemons, seafood, and olive oil. Visitors can explore the charming towns of Positano, Amalfi, and Ravello, each with its own unique character and attractions. From scenic hikes to leisurely boat rides, there are endless ways to take in the natural beauty of the Amalfi Coast. With its warm hospitality and unparalleled charm, the Amalfi Coast is a must-visit destination for anyone seeking a taste of la dolce vita.",
+      "image": "https://www.travelandleisure.com/thmb/n149x4IEv7uTFUHqaE2tQT8PInQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/header-positano-AMALFI0622-39a49349a2c145e6b3df85f884cf3217.jpg",
+      "location": "Italy",
+      "thumbnail": "https://cdn.kimkim.com/files/a/content_articles/featured_photos/89b7784f74186be16b21ac86a62287c6f0bc88ca/big-79e11f71a3fedb7760a2201c46e31155.jpg"
+    }
+  },
+  {
+    "model": "vacationistaapi.highlight",
+    "pk": 2,
+    "fields": {
+      "title": "Berlin",
+      "content": "Berlin is a vibrant and dynamic city that is both steeped in history and forward-thinking in its approach. As the capital of Germany, it is a hub for politics, culture, and the arts. Visitors to the city can explore a wealth of historical landmarks and museums, such as the Berlin Wall, the Brandenburg Gate, and the Holocaust Memorial. In addition to its rich history, Berlin is also a hub for contemporary art, music, and fashion, with a thriving creative scene that draws artists and designers from around the world. The city is also renowned for its lively nightlife, with a diverse array of bars, clubs, and restaurants to suit every taste. From world-class museums to cutting-edge galleries, from bustling markets to peaceful parks, Berlin truly has something for everyone.",
+      "image": "https://www.travelandleisure.com/thmb/Etq4zWgOW-z9H7ZScs5_6WDcDvQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/berlin-germany-aerial-lead-BERLINTG0921-475e3a333c7f4fdea7743c6fc2f261af.jpg",
+      "location": "Germany",
+      "thumbnail": "https://theplanetd.com/images/places-to-visit-in-berlin-germany.jpg"
+    }
+  },
+  {
+    "model": "vacationistaapi.highlight",
+    "pk": 3,
+    "fields": {
+      "title": "Glasgow",
+      "content": "Glasgow is a dynamic and culturally rich city in Scotland that boasts a rich history and a vibrant contemporary scene. Known for its friendly locals and stunning architecture, Glasgow offers a wealth of museums, galleries, and cultural institutions, including the Kelvingrove Art Gallery and Museum and the Riverside Museum of Transport and Travel. The city is also a hub for music, with a thriving live music scene and numerous festivals and events throughout the year. Foodies will love the city's restaurants, which showcase Scottish and international cuisine, as well as its lively pubs and bars. With its stunning parks, charming neighborhoods, and friendly atmosphere, Glasgow is a must-visit destination for anyone traveling to Scotland.",
+      "image": "https://img.delicious.com.au/MzilNPOR/del/2018/12/on-the-go-in-glasgow-98211-2.jpg",
+      "location": "Scotland",
+      "thumbnail": "https://media.timeout.com/images/105400989/750/422/image.jpg"
+    }
+  },
+  {
+    "model": "vacationistaapi.highlight",
+    "pk": 4,
+    "fields": {
+      "title": "Biarritz",
+      "content": "Biarritz is a coastal city located in the southwestern region of France, renowned for its picturesque beaches, vibrant nightlife, and rich cultural heritage. Nestled in the heart of the Basque Country, the city boasts a unique blend of French and Spanish influences, making it a popular tourist destination for visitors from all over the world. Some of the most popular attractions in Biarritz include the Grande Plage, a beautiful sandy beach that is ideal for sunbathing and swimming, the Museum of the Sea, which showcases the rich maritime history of the city, and the Rocher de la Vierge, a stunning natural landmark that offers breathtaking views of the Bay of Biscay. Additionally, Biarritz is home to a plethora of restaurants, cafes, and bars, making it an excellent destination for foodies and nightlife enthusiasts alike.",
+      "image": "https://a.cdn-hotels.com/gdcs/production114/d720/056f3475-11b9-45b3-aeaf-7536f6ccd0a6.jpg?impolicy=fcrop&w=800&h=533&q=medium",
+      "location": "France",
+      "thumbnail": "https://www.whereandwhen.net/site/images/illustration/biarritz_478.jpg"
+    }
+  },
+  {
+    "model": "vacationistaapi.highlight",
+    "pk": 5,
+    "fields": {
+      "title": "San Sebastián",
+      "content": "Donostia-San Sebastian is a picturesque coastal city located in the Basque Country region of northern Spain, known for its stunning beaches, impressive architecture, and world-renowned cuisine. The city is situated on the Bay of Biscay, offering visitors breathtaking views of the sea and the surrounding mountains. One of the most popular attractions in Donostia-San Sebastian is La Concha Beach, a crescent-shaped shoreline that is consistently ranked as one of the best urban beaches in Europe. The city is also home to a number of historic buildings, including the Miramar Palace and the San Telmo Museum. Additionally, Donostia-San Sebastian is famous for its culinary scene, which is centered around the pintxos, a type of Basque tapas that is served in bars and restaurants throughout the city. With its rich cultural heritage, stunning natural scenery, and world-class gastronomy, Donostia-San Sebastian is a must-visit destination for anyone traveling to the Basque Country.",
+      "image": "https://www.theintrepidguide.com/wp-content/uploads/2019/05/Top-things-to-do-in-San-Sebastian-Spain-Balcony-at-Monte-Igueldo.jpg",
+      "location": "Spain",
+      "thumbnail": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/san-sebastian-bay-lit-up-3f087c6.jpg"
+    }
+  }
+]

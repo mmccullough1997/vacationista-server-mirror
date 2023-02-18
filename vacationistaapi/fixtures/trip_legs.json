@@ -1,0 +1,66 @@
+[
+  {
+    "model": "vacationistaapi.tripleg",
+    "pk": 1,
+    "fields": {
+      "trip": 1,
+      "leg": 1
+    }
+  },
+  {
+    "model": "vacationistaapi.tripleg",
+    "pk": 2,
+    "fields": {
+      "trip": 1,
+      "leg": 2
+    }
+  },
+  {
+    "model": "vacationistaapi.tripleg",
+    "pk": 3,
+    "fields": {
+      "trip": 2,
+      "leg": 3
+    }
+  },
+  {
+    "model": "vacationistaapi.tripleg",
+    "pk": 4,
+    "fields": {
+      "trip": 2,
+      "leg": 4
+    }
+  },
+  {
+    "model": "vacationistaapi.tripleg",
+    "pk": 5,
+    "fields": {
+      "trip": 2,
+      "leg": 5
+    }
+  },
+  {
+    "model": "vacationistaapi.tripleg",
+    "pk": 6,
+    "fields": {
+      "trip": 4,
+      "leg": 6
+    }
+  },
+  {
+    "model": "vacationistaapi.tripleg",
+    "pk": 7,
+    "fields": {
+      "trip": 4,
+      "leg": 7
+    }
+  },
+  {
+    "model": "vacationistaapi.tripleg",
+    "pk": 8,
+    "fields": {
+      "trip": 4,
+      "leg": 8
+    }
+  }
+]

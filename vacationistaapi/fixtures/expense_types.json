@@ -1,0 +1,44 @@
+[
+  {
+    "model": "vacationistaapi.expensetype",
+    "pk": 1,
+    "fields": {
+      "label": "Accomodation"
+    }
+  },
+  {
+    "model": "vacationistaapi.expensetype",
+    "pk": 2,
+    "fields": {
+      "label": "Food & Drink"
+    }
+  },
+  {
+    "model": "vacationistaapi.expensetype",
+    "pk": 3,
+    "fields": {
+      "label": "Activities & Attractions"
+    }
+  },
+  {
+    "model": "vacationistaapi.expensetype",
+    "pk": 4,
+    "fields": {
+      "label": "Shopping & Souvenirs"
+    }
+  },
+  {
+    "model": "vacationistaapi.expensetype",
+    "pk": 5,
+    "fields": {
+      "label": "Travel Insurance & Fees"
+    }
+  },
+  {
+    "model": "vacationistaapi.expensetype",
+    "pk": 6,
+    "fields": {
+      "label": "Miscellaneous"
+    }
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "model": "vacationistaapi.trip",
+    "pk": 1,
+    "fields": {
+      "user": 1,
+      "start": "2023-01-13",
+      "end": "2023-01-20",
+      "travel_from": "Nashville, TN",
+      "travel_to": "Lisbon, Portugal",
+      "budget": 2500
+    }
+  },
+  {
+    "model": "vacationistaapi.trip",
+    "pk": 2,
+    "fields": {
+      "user": 1,
+      "start": "2023-02-01",
+      "end": "2023-02-12",
+      "travel_from": "Nashville, TN",
+      "travel_to": "Paris, France",
+      "budget": 4000
+    }
+  },
+  {
+    "model": "vacationistaapi.trip",
+    "pk": 3,
+    "fields": {
+      "user": 2,
+      "start": "2023-01-01",
+      "end": "2023-01-10",
+      "travel_from": "Philadelphia, PA",
+      "travel_to": "Bangkok, Thailand",
+      "budget": 3000
+    }
+  },
+  {
+    "model": "vacationistaapi.trip",
+    "pk": 4,
+    "fields": {
+      "user": 3,
+      "start": "2022-12-10",
+      "end": "2023-01-20",
+      "travel_from": "Los Angeles, CA",
+      "travel_to": "London, England",
+      "budget": 10000
+    }
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "model": "vacationistaapi.eventtype",
+    "pk": 1,
+    "fields": {
+      "label": "Sightseeing"
+    }
+  },
+  {
+    "model": "vacationistaapi.eventtype",
+    "pk": 2,
+    "fields": {
+      "label": "Outdoor"
+    }
+  },
+  {
+    "model": "vacationistaapi.eventtype",
+    "pk": 3,
+    "fields": {
+      "label": "Water"
+    }
+  },
+  {
+    "model": "vacationistaapi.eventtype",
+    "pk": 4,
+    "fields": {
+      "label": "Cultural"
+    }
+  },
+  {
+    "model": "vacationistaapi.eventtype",
+    "pk": 5,
+    "fields": {
+      "label": "Food & Drink"
+    }
+  },
+  {
+    "model": "vacationistaapi.eventtype",
+    "pk": 6,
+    "fields": {
+      "label": "Adventure"
+    }
+  },
+  {
+    "model": "vacationistaapi.eventtype",
+    "pk": 7,
+    "fields": {
+      "label": "Relaxation"
+    }
+  },
+  {
+    "model": "vacationistaapi.eventtype",
+    "pk": 8,
+    "fields": {
+      "label": "Sports"
+    }
+  },
+  {
+    "model": "vacationistaapi.eventtype",
+    "pk": 9,
+    "fields": {
+      "label": "Entertainment"
+    }
+  },
+  {
+    "model": "vacationistaapi.eventtype",
+    "pk": 10,
+    "fields": {
+      "label": "Miscellaneous"
+    }
+  }
+]
