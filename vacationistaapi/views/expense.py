@@ -45,7 +45,12 @@ class ExpenseView(ViewSet):
     expense = Expense.objects.get(pk=pk)
     expense.expense_type = ExpenseType.objects.get(id=request.data["expense_type"])
     expense.trip = Trip.objects.get(id = request.data["trip"])
-    expense.leg = Leg.objects.get(id = request.data["leg"])
+    
+    try:
+      expense.leg = Leg.objects.get(id = request.data["leg"])
+    except:
+      expense.leg = None
+      
     expense.amount = request.data["amount"]
     expense.comment = request.data["comment"]
     expense.title = request.data["title"]
@@ -59,7 +64,12 @@ class ExpenseView(ViewSet):
     
     expense_type = ExpenseType.objects.get(id=request.data["expense_type"])
     trip = Trip.objects.get(id=request.data["trip"])
-    leg = Leg.objects.get(id=request.data["leg"])
+    
+    try:
+      leg = Leg.objects.get(id=request.data["leg"])
+    except:
+      leg = None
+      
     expense = Expense.objects.create(
       expense_type = expense_type,
       trip = trip,

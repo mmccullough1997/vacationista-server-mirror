@@ -59,7 +59,7 @@ class TripLegView(ViewSet):
       trip = trip,
       leg = leg,
       )
-    serializer = TripLeg(trip_leg)
+    serializer = TripLegSerializer(trip_leg)
     return Response(serializer.data)
   
   def destroy(self, request, pk):

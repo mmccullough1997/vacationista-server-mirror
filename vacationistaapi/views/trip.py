@@ -9,7 +9,7 @@ class TripSerializer(serializers.ModelSerializer):
   class Meta:
     model = Trip
     fields = ('id', 'user', 'start', 'end', 'travel_from', 'travel_to', 'budget')
-    depth = 2
+    depth = 1
     
 class TripView(ViewSet):
   """Vacationista Trip View"""

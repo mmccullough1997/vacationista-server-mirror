@@ -8,7 +8,7 @@ class TransportationSerializer(serializers.ModelSerializer):
   """JSON serializer for Transportations"""
   class Meta:
     model = Transportation
-    fields = ('id', 'transportation_type', 'trip', 'leg', 'travel_from', 'travel_to', 'amount', 'comment', 'round_trip', 'title')
+    fields = ('id', 'transportation_type', 'trip', 'leg', 'travel_from', 'travel_to', 'amount', 'comment', 'round_trip')
     depth = 2
     
 class TransportationView(ViewSet):
@@ -45,11 +45,17 @@ class TransportationView(ViewSet):
     transportation = Transportation.objects.get(pk=pk)
     Transportation.transportation_type = TransportationType.objects.get(id=request.data["transportation_type"])
     transportation.trip = Trip.objects.get(id = request.data["trip"])
-    transportation.leg = Leg.objects.get(id = request.data["leg"])
+    
+    try:
+      transportation.leg = Leg.objects.get(id = request.data["leg"])
+    except:
+      transportation.leg = None
+  
     transportation.travel_from = request.data["travel_from"]
     transportation.travel_to = request.data["travel_to"]
     transportation.amount = request.data["amount"]
     transportation.comment = request.data["comment"]
+    transportation.round_trip = request.data["round_trip"]
     
     transportation.save()
 
@@ -60,7 +66,12 @@ class TransportationView(ViewSet):
     
     transportation_type = TransportationType.objects.get(id=request.data["transportation_type"])
     trip = Trip.objects.get(id=request.data["trip"])
-    leg = Leg.objects.get(id=request.data["leg"])
+    
+    try:
+      leg = Leg.objects.get(id=request.data["leg"])
+    except:
+      leg = None
+      
     transportation = Transportation.objects.create(
       transportation_type = transportation_type,
       trip = trip,
@@ -69,6 +80,7 @@ class TransportationView(ViewSet):
       travel_to = request.data["travel_to"],
       amount = request.data["amount"],
       comment = request.data["comment"],
+      round_trip = request.data["round_trip"]
       )
     serializer = TransportationSerializer(transportation)
     return Response(serializer.data)

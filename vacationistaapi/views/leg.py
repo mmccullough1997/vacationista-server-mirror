@@ -9,7 +9,7 @@ class LegSerializer(serializers.ModelSerializer):
   class Meta:
     model = Leg
     fields = ('id', 'user', 'start', 'end', 'location', 'budget')
-    depth = 2
+    depth = 1
     
 class LegView(ViewSet):
   """Vacationista Leg View"""

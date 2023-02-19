@@ -45,7 +45,12 @@ class EventView(ViewSet):
     event = Event.objects.get(pk=pk)
     event.event_type = EventType.objects.get(id=request.data["event_type"])
     event.trip = Trip.objects.get(id = request.data["trip"])
-    event.leg = Leg.objects.get(id = request.data["leg"])
+    
+    try:
+      event.leg = Leg.objects.get(id = request.data["leg"])
+    except:
+      event.leg = None
+  
     event.description = request.data["description"]
     event.location = request.data["location"]
     event.date = request.data["date"]
@@ -61,7 +66,12 @@ class EventView(ViewSet):
     
     event_type = EventType.objects.get(id=request.data["event_type"])
     trip = Trip.objects.get(id=request.data["trip"])
-    leg = Leg.objects.get(id=request.data["leg"])
+    
+    try:
+      leg = Leg.objects.get(id=request.data["leg"])
+    except:
+      leg = None
+      
     event = Event.objects.create(
       event_type = event_type,
       trip = trip,
