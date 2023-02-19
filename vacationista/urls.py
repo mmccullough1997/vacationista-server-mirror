@@ -13,9 +13,32 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from django.conf.urls import include
+from rest_framework import routers
 from django.contrib import admin
 from django.urls import path
 
+from vacationistaapi.views import register_user, check_user, ArticleView, HighlightView, RecommendationView, UserView, TransportationTypeView, ExpenseTypeView, EventTypeView, TripLegView, TripView, LegView, TransportationView, EventView, ExpenseView
+
+router = routers.DefaultRouter(trailing_slash=False)
+
+router.register(r'articles', ArticleView, 'article')
+router.register(r'highlights', HighlightView, 'highlight')
+router.register(r'recommendations', RecommendationView, 'recommendation')
+router.register(r'users', UserView, 'user')
+router.register(r'transportationtypes', TransportationTypeView, 'transportationtype')
+router.register(r'expensetypes', ExpenseTypeView, 'expensetype')
+router.register(r'eventtypes', EventTypeView, 'eventtype')
+router.register(r'trips', TripView, 'trip')
+router.register(r'legs', LegView, 'leg')
+router.register(r'triplegs', TripLegView, 'tripleg')
+router.register(r'transportations', TransportationView, 'transportation')
+router.register(r'expenses', ExpenseView, 'expense')
+router.register(r'events', EventView, 'event')
+
 urlpatterns = [
+    path('register', register_user),
+    path('checkuser', check_user),
     path('admin/', admin.site.urls),
+    path('', include(router.urls)),
 ]

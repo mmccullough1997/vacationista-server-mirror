@@ -6,3 +6,4 @@ class Recommendation(models.Model):
   description = models.CharField(max_length=500, null=True, blank=True)
   location = models.CharField(max_length=500)
   rating = models.DecimalField(max_digits=20, decimal_places=2)
+  image = models.CharField(max_length=500, null=True, blank=True)

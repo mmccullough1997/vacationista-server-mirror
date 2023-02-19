@@ -7,7 +7,8 @@
       "category": "Seafood",
       "description": "Joe's Crab Shack is a casual seafood restaurant chain known for its lively atmosphere and mouthwatering menu. From the moment you walk in, you're greeted by friendly staff and a beach-themed decor that transports you to the coast. The menu features a variety of seafood options, including crab, shrimp, and fish, prepared in a range of styles. Some standout dishes include the classic steampot and the famous buckets of crab. The restaurant also offers a selection of cocktails, beers, and wines to perfectly complement your meal. Whether you're with friends or family, Joe's Crab Shack is a fun and flavorful dining experience.",
       "location": "London",
-      "rating": 5.0
+      "rating": 5.0,
+      "image": "https://media-cdn.tripadvisor.com/media/photo-s/19/08/b9/ee/caption.jpg"
     }
   },
   {
@@ -18,7 +19,8 @@
       "category": "Comfort Food",
       "description": "Mama's Diner is a cozy and welcoming restaurant that evokes a sense of nostalgia and comfort. The decor is classic 1950s, with checkered floors, vinyl booths, and retro signage. The menu is packed with classic diner fare, from all-day breakfast options to juicy burgers and hearty sandwiches. You'll also find milkshakes, floats, and other indulgent treats that will transport you to another era. The staff is friendly and attentive, treating you like family from the moment you step in the door. Whether you're a regular or a first-time visitor, Mama's Diner is sure to leave you feeling satisfied and satisfied.",
       "location": "Amsterdam",
-      "rating": 4.0
+      "rating": 4.0,
+      "image": "https://mamasdaughtersdiner.com/wp-content/uploads/2020/09/Diner-8-Exterior-Day-v3t.jpg"
     }
   },
   {
@@ -29,7 +31,8 @@
       "category": "Luxury Dining",
       "description": "Bertrand's is a world-class restaurant that exudes elegance, sophistication, and exclusivity. The decor is tasteful and refined, with plush seating, crystal chandeliers, and stunning artwork on the walls. The menu features haute cuisine prepared with the finest and freshest ingredients, showcasing the culinary expertise of the talented chefs. Dishes are beautifully presented, and each bite is a masterpiece of flavor and texture. The wine list is extensive, with rare and exquisite bottles from around the world to perfectly complement your meal. Whether for a romantic evening or a special occasion, Bertrand's is the ultimate destination for those seeking a truly luxurious dining experience.",
       "location": "Paris",
-      "rating": 5.0
+      "rating": 5.0,
+      "image": "https://media.timeout.com/images/105387012/image.jpg"
     }
   }
 ]
