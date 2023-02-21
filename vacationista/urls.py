@@ -18,7 +18,7 @@ from rest_framework import routers
 from django.contrib import admin
 from django.urls import path
 
-from vacationistaapi.views import register_user, check_user, ArticleView, HighlightView, RecommendationView, UserView, TransportationTypeView, ExpenseTypeView, EventTypeView, TripLegView, TripView, LegView, TransportationView, EventView, ExpenseView
+from vacationistaapi.views import register_user, check_user, ArticleView, HighlightView, RecommendationView, UserView, TransportationTypeView, ExpenseTypeView, EventTypeView, TripLegView, TripView, LegView, TransportationView, EventView, ExpenseView, YelpAPIView, AutocompleteAPIView
 
 router = routers.DefaultRouter(trailing_slash=False)
 
@@ -41,4 +41,6 @@ urlpatterns = [
     path('checkuser', check_user),
     path('admin/', admin.site.urls),
     path('', include(router.urls)),
+    path('locations/<str:param>/', YelpAPIView.as_view()),
+    path('autocomplete/<str:param>/', AutocompleteAPIView.as_view())
 ]
