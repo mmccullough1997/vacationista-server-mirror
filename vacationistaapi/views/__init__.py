@@ -12,3 +12,5 @@ from .trip_leg import TripLegView
 from .expense import ExpenseView
 from .event import EventView
 from .transportation import TransportationView
+from .yelp import YelpAPIView
+from .autocomplete import AutocompleteAPIView
