@@ -8,7 +8,7 @@ class ArticleSerializer(serializers.ModelSerializer):
   """JSON serializer for Articles"""
   class Meta:
     model = Article
-    fields = ('id', 'date_posted', 'content', 'image', 'thumbnail')
+    fields = ('id', 'title', 'date_posted', 'content', 'image', 'thumbnail')
     
 class ArticleView(ViewSet):
   """Vacationista Article View"""

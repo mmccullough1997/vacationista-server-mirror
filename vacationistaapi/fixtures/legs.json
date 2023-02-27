@@ -4,8 +4,8 @@
     "pk": 1,
     "fields": {
       "user": 1,
-      "start": "2023-01-13",
-      "end": "2023-01-16",
+      "start": "2023-04-13",
+      "end": "2023-04-16",
       "location": "Lisbon, Portugal",
       "budget": 500
     }
@@ -15,8 +15,8 @@
     "pk": 2,
     "fields": {
       "user": 1,
-      "start": "2023-01-16",
-      "end": "2023-01-20",
+      "start": "2023-04-16",
+      "end": "2023-04-20",
       "location": "Madrid, Spain",
       "budget": 1000
     }
@@ -26,8 +26,8 @@
     "pk": 3,
     "fields": {
       "user": 1,
-      "start": "2023-02-01",
-      "end": "2023-02-05",
+      "start": "2023-05-01",
+      "end": "2023-05-05",
       "location": "Paris, France",
       "budget": 650
     }
@@ -37,8 +37,8 @@
     "pk": 4,
     "fields": {
       "user": 1,
-      "start": "2023-02-05",
-      "end": "2023-02-08",
+      "start": "2023-05-05",
+      "end": "2023-05-08",
       "location": "Versailles, France",
       "budget": 600
     }
@@ -48,8 +48,8 @@
     "pk": 5,
     "fields": {
       "user": 1,
-      "start": "2023-02-08",
-      "end": "2023-02-12",
+      "start": "2023-05-08",
+      "end": "2023-05-12",
       "location": "Marseille, France",
       "budget": 1000
     }

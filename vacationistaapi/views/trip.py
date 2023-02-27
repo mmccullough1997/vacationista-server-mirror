@@ -3,6 +3,7 @@ from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers, status
 from vacationistaapi.models import Trip, User
+from datetime import date, datetime
 
 class TripSerializer(serializers.ModelSerializer):
   """JSON serializer for Trips"""
@@ -31,6 +32,19 @@ class TripView(ViewSet):
     id = request.query_params.get('id', None)
     if id is not None:
       trips = trips.filter(id=id)
+      
+    user = request.query_params.get('user', None)
+    if user is not None:
+      trips = trips.filter(user=user)
+      
+    upcoming = request.query_params.get('upcoming', None)
+    if user is not None and upcoming is not None:
+      user_trips = trips.filter(user=user)
+      
+      for trip in user_trips:
+        today = date.today().strftime('%Y-%m-%d')
+        trips = [trip for trip in trips if today < datetime.strftime(trip.start, '%Y-%m-%d')]
+
       
     serializer = TripSerializer(trips, many=True)
     return Response(serializer.data)
