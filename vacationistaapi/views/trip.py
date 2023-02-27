@@ -9,7 +9,7 @@ class TripSerializer(serializers.ModelSerializer):
   """JSON serializer for Trips"""
   class Meta:
     model = Trip
-    fields = ('id', 'user', 'start', 'end', 'travel_from', 'travel_to', 'budget')
+    fields = ('id', 'user', 'start', 'end', 'travel_from', 'travel_to', 'budget', 'duration')
     depth = 1
     
 class TripView(ViewSet):
@@ -29,6 +29,7 @@ class TripView(ViewSet):
     """Handle GET requests to get all trips"""
     trips = Trip.objects.all()
     
+    
     id = request.query_params.get('id', None)
     if id is not None:
       trips = trips.filter(id=id)
@@ -45,6 +46,11 @@ class TripView(ViewSet):
         today = date.today().strftime('%Y-%m-%d')
         trips = [trip for trip in trips if today < datetime.strftime(trip.start, '%Y-%m-%d')]
 
+    for trip in trips:
+      try:
+        trip.duration = (trip.end - trip.start).days
+      except:
+        pass
       
     serializer = TripSerializer(trips, many=True)
     return Response(serializer.data)

@@ -8,3 +8,11 @@ class Trip(models.Model):
   travel_from = models.CharField(max_length=500)
   travel_to = models.CharField(max_length=500)
   budget = models.DecimalField(max_digits=20, decimal_places=2)
+
+  @property
+  def duration(self):
+    return self.__duration
+  
+  @duration.setter
+  def duration(self, value):
+    self.__duration = value
