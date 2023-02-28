@@ -2,13 +2,14 @@
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers, status
-from vacationistaapi.models import Leg, User
+from vacationistaapi.models import Leg, User, Event
+from .event import EventSerializer
 
 class LegSerializer(serializers.ModelSerializer):
   """JSON serializer for Legs"""
   class Meta:
     model = Leg
-    fields = ('id', 'user', 'start', 'end', 'location', 'budget')
+    fields = ('id', 'user', 'start', 'end', 'location', 'budget', 'events')
     depth = 1
     
 class LegView(ViewSet):
@@ -18,6 +19,16 @@ class LegView(ViewSet):
     """Handle GET single leg"""
     try:
       leg = Leg.objects.get(pk=pk)
+      
+      events = Event.objects.filter(leg=leg)
+      leg_events = []
+      for event in events:
+        theevent = Event.objects.get(id=event.id)
+        theeventserialized = EventSerializer(theevent)
+        leg_events.append(theeventserialized.data)
+        
+      leg.events = leg_events
+
       serializer = LegSerializer(leg)
       return Response(serializer.data)
     
@@ -31,6 +42,16 @@ class LegView(ViewSet):
     id = request.query_params.get('id', None)
     if id is not None:
       legs = legs.filter(id=id)
+      
+    for leg in legs:
+      events = Event.objects.filter(leg=leg)
+      leg_events = []
+      for event in events:
+        theevent = Event.objects.get(id=event.id)
+        theeventserialized = EventSerializer(theevent)
+        leg_events.append(theeventserialized.data)
+        
+      leg.events = leg_events
       
     serializer = LegSerializer(legs, many=True)
     return Response(serializer.data)

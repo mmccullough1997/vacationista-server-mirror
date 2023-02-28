@@ -16,3 +16,19 @@ class Trip(models.Model):
   @duration.setter
   def duration(self, value):
     self.__duration = value
+
+  @property
+  def events(self):
+    return self.__events
+  
+  @events.setter
+  def events(self, value):
+    self.__events = value
+    
+  @property
+  def legs(self):
+    return self.__legs
+  
+  @legs.setter
+  def legs(self, value):
+    self.__legs = value

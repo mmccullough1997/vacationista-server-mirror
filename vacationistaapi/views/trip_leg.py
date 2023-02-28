@@ -2,7 +2,9 @@
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers, status
-from vacationistaapi.models import Trip, Leg, TripLeg
+from vacationistaapi.models import Trip, Leg, TripLeg, Event
+from .event import EventSerializer
+from .leg import LegSerializer
 
 class TripLegSerializer(serializers.ModelSerializer):
   """JSON serializer for TripLegs"""
@@ -18,6 +20,7 @@ class TripLegView(ViewSet):
     """Handle GET single tripleg"""
     try:
       trip_leg = TripLeg.objects.get(pk=pk)
+      
       serializer = TripLegSerializer(trip_leg)
       return Response(serializer.data)
     
@@ -66,3 +69,10 @@ class TripLegView(ViewSet):
     trip_leg = TripLeg.objects.get(pk=pk)
     trip_leg.delete()
     return Response(None, status=status.HTTP_204_NO_CONTENT)
+
+class LegsOnTripLegsSerializer(serializers.ModelSerializer):
+  """JSON serializer for legs on trip legs"""
+  class Meta:
+    model = Leg
+    fields = ('id', 'user', 'start', 'end', 'location', 'budget', 'events')
+    depth = 1
