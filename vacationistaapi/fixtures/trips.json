@@ -4,8 +4,8 @@
     "pk": 1,
     "fields": {
       "user": 1,
-      "start": "2023-01-13",
-      "end": "2023-01-20",
+      "start": "2023-04-13",
+      "end": "2023-04-20",
       "travel_from": "Nashville, TN",
       "travel_to": "Lisbon, Portugal",
       "budget": 2500
@@ -16,8 +16,8 @@
     "pk": 2,
     "fields": {
       "user": 1,
-      "start": "2023-02-01",
-      "end": "2023-02-12",
+      "start": "2023-04-01",
+      "end": "2023-04-12",
       "travel_from": "Nashville, TN",
       "travel_to": "Paris, France",
       "budget": 4000
@@ -28,8 +28,8 @@
     "pk": 3,
     "fields": {
       "user": 2,
-      "start": "2023-01-01",
-      "end": "2023-01-10",
+      "start": "2023-04-01",
+      "end": "2023-04-10",
       "travel_from": "Philadelphia, PA",
       "travel_to": "Bangkok, Thailand",
       "budget": 3000
@@ -40,8 +40,8 @@
     "pk": 4,
     "fields": {
       "user": 3,
-      "start": "2022-12-10",
-      "end": "2023-01-20",
+      "start": "2022-03-10",
+      "end": "2023-03-20",
       "travel_from": "Los Angeles, CA",
       "travel_to": "London, England",
       "budget": 10000

@@ -3,7 +3,7 @@
     "model": "vacationistaapi.user",
     "pk": 1,
     "fields": {
-      "uid": "1",
+      "uid": "wH4lnvQ5TQhiKD9JEa2zn8FZZso1",
       "first_name": "Bill",
       "last_name": "McCullough",
       "date_registered": "2022-12-13",

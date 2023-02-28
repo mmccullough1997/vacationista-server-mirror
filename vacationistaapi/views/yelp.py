@@ -15,7 +15,7 @@ class YelpAPIView(APIView):
       url = "https://api.yelp.com/v3/businesses/search"
       params = {
           "location": location,
-          "limit": 20,
+          "limit": 5,
           "sort_by": "distance",
       }
       response = requests.get(url, headers=headers, params=params)

@@ -10,7 +10,7 @@ from .trip import TripView
 from .leg import LegView
 from .trip_leg import TripLegView
 from .expense import ExpenseView
-from .event import EventView
+from .event import EventView, EventSerializer
 from .transportation import TransportationView
 from .yelp import YelpAPIView
 from .autocomplete import AutocompleteAPIView
