@@ -23,3 +23,11 @@ class Leg(models.Model):
   @duration.setter
   def duration(self, value):
     self.__duration = value
+
+  @property
+  def trip(self):
+    return self.__trip
+  
+  @trip.setter
+  def trip(self, value):
+    self.__trip = value

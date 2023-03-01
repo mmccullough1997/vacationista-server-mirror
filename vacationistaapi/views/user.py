@@ -42,6 +42,7 @@ class UserView(ViewSet):
     """
 
     user = User.objects.get(pk=pk)
+    user.uid = request.data["uid"]
     user.first_name = request.data["first_name"]
     user.last_name = request.data["last_name"]
     user.date_registered = request.data["date_registered"]

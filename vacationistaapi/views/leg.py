@@ -2,14 +2,14 @@
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers, status
-from vacationistaapi.models import Leg, User, Event
+from vacationistaapi.models import Leg, User, Event, Trip, TripLeg
 from .event import EventSerializer
 
 class LegSerializer(serializers.ModelSerializer):
   """JSON serializer for Legs"""
   class Meta:
     model = Leg
-    fields = ('id', 'user', 'start', 'end', 'location', 'budget', 'events')
+    fields = ('id', 'user', 'start', 'end', 'location', 'budget', 'events', 'trip')
     depth = 1
     
 class LegView(ViewSet):
@@ -20,6 +20,12 @@ class LegView(ViewSet):
     try:
       leg = Leg.objects.get(pk=pk)
       
+      user = request.query_params.get('user', None)
+      if user is not None:
+        leg = Leg.objects.get(pk=pk, user=user)
+      else:
+        leg = Leg.objects.get(pk=pk)
+      
       events = Event.objects.filter(leg=leg)
       leg_events = []
       for event in events:
@@ -28,6 +34,9 @@ class LegView(ViewSet):
         leg_events.append(theeventserialized.data)
         
       leg.events = leg_events
+      
+      leg_trip = TripLeg.objects.get(leg=leg)
+      leg.trip = leg_trip.trip.id
 
       serializer = LegSerializer(leg)
       return Response(serializer.data)
@@ -64,11 +73,37 @@ class LegView(ViewSet):
     """
 
     leg = Leg.objects.get(pk=pk)
-    leg.user = User.objects.get(id=request.data["user"])
-    leg.start = request.data["start"]
-    leg.end = request.data["end"]
-    leg.location = request.data["location"]
-    leg.budget = request.data["budget"]
+    
+    leg_user_id = request.data['user']
+    if leg_user_id == "true":
+      leg_user = User.objects.get(id=leg.user.id)
+      leg.user = leg_user
+    else:
+      leg.user = leg_user_id
+    
+    start_input = request.data["start"]
+    if start_input == "true":
+      leg.start = leg.start
+    else:
+      leg.start = start_input
+    
+    end_input = request.data["end"]
+    if end_input == "true":
+      leg.end = leg.end
+    else:
+      leg.end = end_input
+
+    location_input = request.data["location"]
+    if location_input == "true":
+      leg.location = leg.location
+    else:
+      leg.location = location_input
+      
+    budget_input = request.data["budget"]
+    if budget_input == "true":
+      leg.budget = leg.budget
+    else:
+      leg.budget = budget_input
     
     leg.save()
 
