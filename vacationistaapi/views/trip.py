@@ -96,12 +96,19 @@ class TripView(ViewSet):
       trips = trips.filter(user=user)
       
     upcoming = request.query_params.get('upcoming', None)
-    if user is not None and upcoming is not None:
+    if user is not None and upcoming == 'true':
       user_trips = trips.filter(user=user)
       
       for trip in user_trips:
         today = date.today().strftime('%Y-%m-%d')
         trips = [trip for trip in trips if today < datetime.strftime(trip.start, '%Y-%m-%d')]
+        
+    elif user is not None and upcoming == 'false':
+      user_trips = trips.filter(user=user)
+      
+      for trip in user_trips:
+        today = date.today().strftime('%Y-%m-%d')
+        trips = [trip for trip in trips if today > datetime.strftime(trip.start, '%Y-%m-%d')]
 
     for trip in trips:
       try:
@@ -120,12 +127,43 @@ class TripView(ViewSet):
     """
 
     trip = Trip.objects.get(pk=pk)
-    trip.user = User.objects.get(id=request.data["user"])
-    trip.start = request.data["start"]
-    trip.end = request.data["end"]
-    trip.travel_from = request.data["travel_from"]
-    trip.travel_to = request.data["travel_to"]
-    trip.budget = request.data["budget"]
+    
+    trip_user_id = request.data['user']
+    if trip_user_id == "true":
+      trip_user = User.objects.get(id=trip.user.id)
+      trip.user = trip_user
+    else:
+      trip.user = trip_user_id
+    
+    start_input = request.data["start"]
+    if start_input == "true":
+      trip.start = trip.start
+    else:
+      trip.start = start_input
+    
+    end_input = request.data["end"]
+    if end_input == "true":
+      trip.end = trip.end
+    else:
+      trip.end = end_input
+
+    travel_from_input = request.data["travel_from"]
+    if travel_from_input == "true":
+      trip.travel_from = trip.travel_from
+    else:
+      trip.travel_from = travel_from_input
+      
+    travel_to_input = request.data["travel_to"]
+    if travel_to_input == "true":
+      trip.travel_to = trip.travel_to
+    else:
+      trip.travel_to = travel_to_input
+      
+    budget_input = request.data["budget"]
+    if budget_input == "true":
+      trip.budget = trip.budget
+    else:
+      trip.budget = budget_input
     
     trip.save()
 

@@ -16,7 +16,7 @@
     "model": "vacationistaapi.user",
     "pk": 2,
     "fields": {
-      "uid": "2",
+      "uid": "i80JZuk111ZlWWpdKs9908De8uD2",
       "first_name": "Jessica",
       "last_name": "Firestorm",
       "date_registered": "2022-01-10",
@@ -29,7 +29,7 @@
     "model": "vacationistaapi.user",
     "pk": 3,
     "fields": {
-      "uid": "3",
+      "uid": "nTCW2FdDfCPvhpqjIoiv3YdDI5e2",
       "first_name": "Brad",
       "last_name": "Butter",
       "date_registered": "2022-03-14",
