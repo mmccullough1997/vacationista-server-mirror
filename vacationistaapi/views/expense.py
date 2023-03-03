@@ -32,6 +32,14 @@ class ExpenseView(ViewSet):
     if id is not None:
       expenses = expenses.filter(id=id)
       
+    trip = request.query_params.get('trip', None)
+    if trip is not None:
+      expenses = expenses.filter(trip=trip)
+      
+    leg = request.query_params.get('leg', None)
+    if leg is not None:
+      expenses = expenses.filter(leg=leg)
+      
     serializer = ExpenseSerializer(expenses, many=True)
     return Response(serializer.data)
   
