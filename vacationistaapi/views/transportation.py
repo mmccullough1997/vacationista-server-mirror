@@ -32,6 +32,14 @@ class TransportationView(ViewSet):
     if id is not None:
       transportations = transportations.filter(id=id)
       
+    trip = request.query_params.get('trip', None)
+    if trip is not None:
+      transportations = transportations.filter(trip=trip)
+      
+    leg = request.query_params.get('leg', None)
+    if leg is not None:
+      transportations = transportations.filter(leg=leg)
+      
     serializer = TransportationSerializer(transportations, many=True)
     return Response(serializer.data)
   

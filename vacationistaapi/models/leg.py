@@ -31,3 +31,43 @@ class Leg(models.Model):
   @trip.setter
   def trip(self, value):
     self.__trip = value
+
+  @property
+  def expenses(self):
+    return self.__expenses
+
+  @expenses.setter
+  def expenses(self, value):
+    self.__expenses = value
+
+  @property
+  def expense_total(self):
+    return self.__expense_total
+
+  @expense_total.setter
+  def expense_total(self, value):
+    self.__expense_total = value
+    
+  @property
+  def transportations(self):
+    return self.__transportations
+
+  @transportations.setter
+  def transportations(self, value):
+    self.__transportations = value
+
+  @property
+  def transportation_total(self):
+    return self.__transportation_total
+
+  @transportation_total.setter
+  def transportation_total(self, value):
+    self.__transportation_total = value
+
+  @property
+  def total(self):
+    return self.__total
+
+  @total.setter
+  def total(self, value):
+    self.__total = value

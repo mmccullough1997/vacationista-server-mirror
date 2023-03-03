@@ -2,17 +2,20 @@
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers, status
-from vacationistaapi.models import Trip, User, Event, Leg, TripLeg
+from vacationistaapi.models import Trip, User, Event, Leg, TripLeg, Expense, Transportation
 from datetime import date, datetime
 from .event import EventSerializer
 from .trip_leg import TripLegSerializer
 from .leg import LegSerializer
 
+# bradbutter414
+# jessfirestorm669
+
 class TripSerializer(serializers.ModelSerializer):
   """JSON serializer for Trips"""
   class Meta:
     model = Trip
-    fields = ('id', 'user', 'start', 'end', 'travel_from', 'travel_to', 'budget', 'duration', 'events', 'legs')
+    fields = ('id', 'user', 'start', 'end', 'travel_from', 'travel_to', 'budget', 'duration', 'events', 'legs', 'expenses', 'expense_total', 'transportations', 'transportation_total', 'total')
     depth = 1
     
 class NewLegSerializer(serializers.ModelSerializer):
@@ -67,13 +70,41 @@ class TripView(ViewSet):
           theevent = Event.objects.get(id=event.id)
           theeventserialized = NewEventSerializer(theevent)
           leg_events.append(theeventserialized.data)
-        
+
         leg.events = leg_events
         leg.duration = (leg.end - leg.start).days
         thelegserialized = NewLegSerializer(leg)
         legs.append(thelegserialized.data)
         
       trip.legs = legs
+      
+      expenses = Expense.objects.filter(trip=trip)
+      trip_expenses= []
+      for expense in expenses:
+        theexpense = Expense.objects.get(id=expense.id)
+        trip_expenses.append(ExpensesOnTripSerializer(theexpense).data)
+      trip.expenses = trip_expenses
+      
+      expense_total = 0
+      for expense in expenses:
+        expense_total += expense.amount
+        
+      trip.expense_total = expense_total
+      
+      transportations = Transportation.objects.filter(trip=trip)
+      trip_transportations= []
+      for transportation in transportations:
+        thetransportations = Transportation.objects.get(id=transportation.id)
+        trip_transportations.append(TransportationsOnTripSerializer(thetransportations).data)
+      trip.transportations = trip_transportations
+      
+      transportation_total = 0
+      for transportation in transportations:
+        transportation_total += transportation.amount
+        
+      trip.transportation_total = transportation_total
+      
+      trip.total = expense_total + transportation_total
   
       serializer = TripSerializer(trip)
       return Response(serializer.data)
@@ -195,3 +226,17 @@ class LegsOnTripSerializer(serializers.ModelSerializer):
     model = TripLeg
     fields = ('id', 'leg')
     depth = 2
+
+class ExpensesOnTripSerializer(serializers.ModelSerializer):
+  """JSON serializer for expenses on trips"""
+  class Meta:
+    model = Expense
+    fields = ('id', 'expense_type', 'leg', 'amount', 'comment', 'title')
+    depth = 1
+
+class TransportationsOnTripSerializer(serializers.ModelSerializer):
+  """JSON serializer for transportations on trips"""
+  class Meta:
+    model = Transportation
+    fields = ('id', 'transportation_type', 'leg', 'travel_from', 'travel_to',  'amount', 'comment', 'round_trip')
+    depth = 1

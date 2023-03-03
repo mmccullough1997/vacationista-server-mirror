@@ -2,14 +2,14 @@
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers, status
-from vacationistaapi.models import Leg, User, Event, Trip, TripLeg
+from vacationistaapi.models import Leg, User, Event, Trip, TripLeg, Expense, Transportation
 from .event import EventSerializer
 
 class LegSerializer(serializers.ModelSerializer):
   """JSON serializer for Legs"""
   class Meta:
     model = Leg
-    fields = ('id', 'user', 'start', 'end', 'location', 'budget', 'events', 'trip')
+    fields = ('id', 'user', 'start', 'end', 'location', 'budget', 'events', 'trip', 'expenses', 'expense_total', 'transportations', 'transportation_total', 'total')
     depth = 1
     
 class LegView(ViewSet):
@@ -37,6 +37,34 @@ class LegView(ViewSet):
       
       leg_trip = TripLeg.objects.get(leg=leg)
       leg.trip = leg_trip.trip.id
+      
+      expenses = Expense.objects.filter(leg=leg)
+      leg_expenses= []
+      for expense in expenses:
+        theexpense = Expense.objects.get(id=expense.id)
+        leg_expenses.append(ExpensesOnLegSerializer(theexpense).data)
+      leg.expenses = leg_expenses
+      
+      expense_total = 0
+      for expense in expenses:
+        expense_total += expense.amount
+        
+      leg.expense_total = expense_total
+      
+      transportations = Transportation.objects.filter(leg=leg)
+      leg_transportations= []
+      for transportation in transportations:
+        thetransportations = Transportation.objects.get(id=transportation.id)
+        leg_transportations.append(TransportationsOnLegSerializer(thetransportations).data)
+      leg.transportations = leg_transportations
+      
+      transportation_total = 0
+      for transportation in transportations:
+        transportation_total += transportation.amount
+        
+      leg.transportation_total = transportation_total
+      
+      leg.total = expense_total + transportation_total
 
       serializer = LegSerializer(leg)
       return Response(serializer.data)
@@ -127,3 +155,17 @@ class LegView(ViewSet):
     leg = Leg.objects.get(pk=pk)
     leg.delete()
     return Response(None, status=status.HTTP_204_NO_CONTENT)
+
+class ExpensesOnLegSerializer(serializers.ModelSerializer):
+  """JSON serializer for expenses on legs"""
+  class Meta:
+    model = Expense
+    fields = ('id', 'expense_type','trip', 'amount', 'comment', 'title')
+    depth = 1
+
+class TransportationsOnLegSerializer(serializers.ModelSerializer):
+  """JSON serializer for transportations on legs"""
+  class Meta:
+    model = Transportation
+    fields = ('id', 'transportation_type', 'trip', 'travel_from', 'travel_to',  'amount', 'comment', 'round_trip')
+    depth = 1
