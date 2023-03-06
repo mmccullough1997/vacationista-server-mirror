@@ -10,7 +10,7 @@ class LegSerializer(serializers.ModelSerializer):
   class Meta:
     model = Leg
     fields = ('id', 'user', 'start', 'end', 'location', 'budget', 'events', 'trip', 'expenses', 'expense_total', 'transportations', 'transportation_total', 'total')
-    depth = 1
+    depth = 2
     
 class LegView(ViewSet):
   """Vacationista Leg View"""
@@ -36,7 +36,7 @@ class LegView(ViewSet):
       leg.events = leg_events
       
       leg_trip = TripLeg.objects.get(leg=leg)
-      leg.trip = leg_trip.trip.id
+      leg.trip = TripOnLegSerializer(leg_trip.trip).data
       
       expenses = Expense.objects.filter(leg=leg)
       leg_expenses= []
@@ -79,6 +79,7 @@ class LegView(ViewSet):
     id = request.query_params.get('id', None)
     if id is not None:
       legs = legs.filter(id=id)
+    
       
     for leg in legs:
       events = Event.objects.filter(leg=leg)
@@ -168,4 +169,11 @@ class TransportationsOnLegSerializer(serializers.ModelSerializer):
   class Meta:
     model = Transportation
     fields = ('id', 'transportation_type', 'trip', 'travel_from', 'travel_to',  'amount', 'comment', 'round_trip')
+    depth = 1
+
+class TripOnLegSerializer(serializers.ModelSerializer):
+  """JSON serializer for trip on legs"""
+  class Meta:
+    model = Trip
+    fields = ('id', 'travel_to')
     depth = 1
