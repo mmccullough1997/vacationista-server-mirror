@@ -231,12 +231,12 @@ class ExpensesOnTripSerializer(serializers.ModelSerializer):
   """JSON serializer for expenses on trips"""
   class Meta:
     model = Expense
-    fields = ('id', 'expense_type', 'leg', 'amount', 'comment', 'title')
+    fields = ('id', 'expense_type', 'trip', 'leg', 'amount', 'comment', 'title')
     depth = 1
 
 class TransportationsOnTripSerializer(serializers.ModelSerializer):
   """JSON serializer for transportations on trips"""
   class Meta:
     model = Transportation
-    fields = ('id', 'transportation_type', 'leg', 'travel_from', 'travel_to',  'amount', 'comment', 'round_trip')
+    fields = ('id', 'transportation_type', 'trip', 'leg', 'travel_from', 'travel_to',  'amount', 'comment', 'round_trip')
     depth = 1
