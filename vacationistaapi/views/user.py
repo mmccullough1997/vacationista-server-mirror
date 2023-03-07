@@ -44,13 +44,50 @@ class UserView(ViewSet):
     """
 
     user = User.objects.get(pk=pk)
-    user.uid = request.data["uid"]
-    user.first_name = request.data["first_name"]
-    user.last_name = request.data["last_name"]
-    user.date_registered = request.data["date_registered"]
-    user.username = request.data["username"]
-    user.bio = request.data["bio"]
-    user.image = request.data["image"]
+    
+    
+    uid_input = request.data["uid"]
+    if uid_input == "true":
+      user.uid = user.uid
+    else:
+      user.uid = uid_input
+      
+    first_name_input = request.data["first_name"]
+    if first_name_input == "true":
+      user.first_name = user.first_name
+    else:
+      user.first_name = first_name_input
+      
+    last_name_input = request.data["last_name"]
+    if last_name_input == "true":
+      user.last_name = user.last_name
+    else:
+      user.last_name = last_name_input
+      
+    date_registered_input = request.data["date_registered"]
+    if date_registered_input == "true":
+      user.date_registered = user.date_registered
+    else:
+      user.date_registered = date_registered_input
+      
+    username_input = request.data["username"]
+    if username_input == "true":
+      user.username = user.username
+    else:
+      user.username = username_input
+      
+    bio_input = request.data["bio"]
+    if bio_input == "true":
+      user.bio = user.bio
+    else:
+      user.bio = bio_input
+      
+    image_input = request.data["image"]
+    if image_input == "true":
+      user.image = user.image
+    else:
+      user.image = image_input
+    
     
     user.save()
 
