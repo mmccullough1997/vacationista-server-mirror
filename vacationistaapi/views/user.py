@@ -2,13 +2,14 @@
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers, status
-from vacationistaapi.models import User
+from vacationistaapi.models import User, Event, Trip
+from .event import EventSerializer
 
 class UserSerializer(serializers.ModelSerializer):
   """JSON serializer for Users"""
   class Meta:
     model = User
-    fields = ('id', 'uid', 'first_name', 'last_name', 'date_registered', 'username', 'bio', 'image')
+    fields = ('id', 'uid', 'first_name', 'last_name', 'date_registered', 'username', 'bio', 'image', 'events')
     
 class UserView(ViewSet):
   """Vacationista User View"""
@@ -17,6 +18,7 @@ class UserView(ViewSet):
     """Handle GET single user"""
     try:
       user = User.objects.get(pk=pk)
+      
       serializer = UserSerializer(user)
       return Response(serializer.data)
     
@@ -58,3 +60,11 @@ class UserView(ViewSet):
     user = User.objects.get(pk=pk)
     user.delete()
     return Response(None, status=status.HTTP_204_NO_CONTENT)
+
+
+class NewEventSerializer(serializers.ModelSerializer):
+  """JSON serializer for events"""
+  class Meta:
+    model = Event
+    fields = ('id', 'event_type')
+    depth = 1

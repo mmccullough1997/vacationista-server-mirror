@@ -108,7 +108,7 @@ class LegView(ViewSet):
       leg_user = User.objects.get(id=leg.user.id)
       leg.user = leg_user
     else:
-      leg.user = leg_user_id
+      leg.user = User.objects.get(id=leg_user_id)
     
     start_input = request.data["start"]
     if start_input == "true":
