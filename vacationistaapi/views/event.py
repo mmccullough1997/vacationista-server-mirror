@@ -19,8 +19,6 @@ class EventView(ViewSet):
     try:
       event = Event.objects.get(pk=pk)
       
-      user = User.objects.get(id=event.trip.id)
-      event.user = user.id
       
       serializer = EventSerializer(event)
       return Response(serializer.data)
