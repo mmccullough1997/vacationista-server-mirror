@@ -8,3 +8,11 @@ class User(models.Model):
   username = models.CharField(max_length=50)
   bio = models.CharField(max_length=400)
   image = models.CharField(max_length=200)
+
+  @property
+  def events(self):
+    return self.__events
+  
+  @events.setter
+  def events(self, value):
+    self.__events = value

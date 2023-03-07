@@ -164,7 +164,7 @@ class TripView(ViewSet):
       trip_user = User.objects.get(id=trip.user.id)
       trip.user = trip_user
     else:
-      trip.user = trip_user_id
+      trip.user = User.objects.get(id=trip_user_id)
     
     start_input = request.data["start"]
     if start_input == "true":

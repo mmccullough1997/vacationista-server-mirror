@@ -12,3 +12,11 @@ class Event(models.Model):
   date = models.DateField(blank=True, null=True)
   image = models.CharField(max_length=500, blank=True, null=True)
   title = models.CharField(max_length=500)
+
+  @property
+  def user(self):
+    return self.__user
+  
+  @user.setter
+  def user(self, value):
+    self.__user = value
