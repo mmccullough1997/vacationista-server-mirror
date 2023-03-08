@@ -40,6 +40,9 @@ class TransportationView(ViewSet):
     if leg is not None:
       transportations = transportations.filter(leg=leg)
       
+    if trip and leg is not None:
+      transportations = transportations.filter(trip=trip, leg=leg)
+      
     serializer = TransportationSerializer(transportations, many=True)
     return Response(serializer.data)
   

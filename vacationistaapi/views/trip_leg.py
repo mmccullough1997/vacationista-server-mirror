@@ -39,6 +39,10 @@ class TripLegView(ViewSet):
     if trip is not None:
       trip_legs = trip_legs.filter(trip=trip)
       
+    leg = request.query_params.get('leg', None)
+    if trip and leg is not None:
+      trip_legs = trip_legs.filter(trip=trip, leg=leg)
+      
     serializer = TripLegSerializer(trip_legs, many=True)
     return Response(serializer.data)
   

@@ -40,6 +40,9 @@ class ExpenseView(ViewSet):
     if leg is not None:
       expenses = expenses.filter(leg=leg)
       
+    if trip and leg is not None:
+      expenses = expenses.filter(trip=trip, leg=leg)
+      
     serializer = ExpenseSerializer(expenses, many=True)
     return Response(serializer.data)
   

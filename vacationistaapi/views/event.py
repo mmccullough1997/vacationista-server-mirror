@@ -34,6 +34,11 @@ class EventView(ViewSet):
     if id is not None:
       events = events.filter(id=id)
       
+    trip = request.query_params.get('trip', None)
+    leg = request.query_params.get('leg', None)
+    if trip and leg is not None:
+      events = events.filter(trip=trip, leg=leg)
+      
       
     serializer = EventSerializer(events, many=True)
     return Response(serializer.data)
