@@ -75,7 +75,7 @@
     "fields": {
       "transportation_type": 1,
       "trip": 1,
-      "leg": 1,
+      "leg": 2,
       "travel_from": "Madrid, Spain",
       "travel_to": "Nashville, TN",
       "amount": 600,
@@ -89,7 +89,7 @@
     "fields": {
       "transportation_type": 3,
       "trip": 2,
-      "leg": 2,
+      "leg": 4,
       "travel_from": "Paris, France",
       "travel_to": "Versailles, France",
       "amount": 30,
@@ -103,7 +103,7 @@
     "fields": {
       "transportation_type": 3,
       "trip": 2,
-      "leg": 3,
+      "leg": 5,
       "travel_from": "Versailles, France",
       "travel_to": "Marseille, France",
       "amount": 45,
@@ -117,7 +117,7 @@
     "fields": {
       "transportation_type": 1,
       "trip": 4,
-      "leg": 4,
+      "leg": 7,
       "travel_from": "London, England",
       "travel_to": "Amsterdam, Netherlands",
       "amount": 100,
@@ -131,7 +131,7 @@
     "fields": {
       "transportation_type": 1,
       "trip": 4,
-      "leg": 5,
+      "leg": 8,
       "travel_from": "Amsterdam, Netherlands",
       "travel_to": "Berlin, Germany",
       "amount": 150,
@@ -145,7 +145,7 @@
     "fields": {
       "transportation_type": 2,
       "trip": 4,
-      "leg": 5,
+      "leg": 8,
       "travel_from": "Berlin, Germany",
       "travel_to": "Dusseldorf, Germany",
       "amount": 30,
