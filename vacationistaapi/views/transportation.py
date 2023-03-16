@@ -54,7 +54,7 @@ class TransportationView(ViewSet):
     """
 
     transportation = Transportation.objects.get(pk=pk)
-    Transportation.transportation_type = TransportationType.objects.get(id=request.data["transportation_type"])
+    transportation.transportation_type = TransportationType.objects.get(id=request.data["transportation_type"])
     transportation.trip = Trip.objects.get(id = request.data["trip"])
     
     try:
