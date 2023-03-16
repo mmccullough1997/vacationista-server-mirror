@@ -13,6 +13,7 @@ class AutocompleteAPIView(APIView):
       params = {
           "text": location,
           "apiKey": geoapify_token,
+          "limit": 10,
       }
       response = requests.get(url, params=params)
       data = response.json()
